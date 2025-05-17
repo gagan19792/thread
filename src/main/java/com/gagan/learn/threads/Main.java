@@ -14,7 +14,7 @@ public class Main {
         //Creating Thread by extending Thread class
         CustomThread customThread = new CustomThread();
         customThread.start();
-
+        printThreadState(currentThread);
         //Creating Thread using Runnable interface
         Runnable runnable = ()->{
           for(int i=1; i<=8; i++){
@@ -29,6 +29,7 @@ public class Main {
 
         Thread newThread = new Thread(runnable);
         newThread.start();
+        printThreadState(newThread);
 
         for(int i =1; i<=3; i++){
             System.out.print(0);
